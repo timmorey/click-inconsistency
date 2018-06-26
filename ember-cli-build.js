@@ -4,7 +4,9 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    // Add options here
+
+    // If this line is commented out, the test will pass.  If uncommented, the test will fail.
+    vendorFiles: { 'jquery.js': null }
   });
 
   // Use `app.import` to add additional libraries to the generated
